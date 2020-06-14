@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			html,
+			body {
+				height: 100%;
+			}
+
+			body {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.box {
+				position: relative;
+				width: 100px;
+				height: 200px;
+				
+                 transform: skew(45deg);
+				/* 开启浏览器3D渲染 */
+				transform-style: preserve-3d;
+				transform: rotateX(0deg) rotateY(0deg);
+				animation: ani 15s linear infinite alternate;
+			}
+
+			@keyframes ani {
+				from {
+					transform:  rotateY(0deg);
+				}
+
+				to {
+					transform:  rotateY(360deg);
+				}
+			}
+		
+
+			.side {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100px;
+				height: 200px;
+				font-size: 40px;
+				color: white;
+				text-align: center;
+				line-height: 200px;
+			}
+
+			.before {
+				background-color: rgba(255, 0, 0, .5);
+				transform: translateZ(134px);
+			}
+
+			.right {
+				background-color: rgba(255, 255, 0, .5);
+				transform: rotateY(40deg) translateZ(134px);
+			}
+
+			.top {
+				background-color: rgba(0, 0, 0, .5);
+				transform: rotateY(80deg) translateZ(134px);
+			}
+
+			.a {
+				background-color: rgba(0, 255, 0, .5);
+				transform: rotateY(120deg) translateZ(134px)
+			}
+
+			.b {
+				background-color: skyblue;
+				transform: rotateY(160deg) translateZ(134px)
+			}
+
+			.c {
+				transform: rotateY(200deg) translateZ(134px)
+			}
+
+			.d {
+				transform: rotateY(240deg) translateZ(134px)
+			}
+			.e{
+				transform: rotateY(280deg) translateZ(134px)
+			}
+			.f{
+				transform: rotateY(320deg) translateZ(134px)
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="side before">
+				<div class="tu1">
+					<img src="图片/1.png" width="100" height="200" />
+				</div>
+			</div>
+			<div class="side right"><img src="图片/2.bmp" width="100" height="200"></div>
+			<div class="side top"><img src="图片/3.png" width="100" height="200"></div>
+			<div class="side a"><img src="图片/4.png" width="100" height="200"></div>
+			<div class="side b"><img src="图片/5.png" width="100" height="200"></div>
+			<div class="side c"><img src="图片/6.png" width="100" height="200"></div>
+			<div class="side d"><img src="图片/7.jpeg" width="100" height="200"></div>
+			<div class="side e"><img src="图片/8.bmp"width="100" height="200"></div>
+			<div class="side f"><img src="图片/9.bmp"width="100" height="200"></div>
+	</body>
+</html>
